@@ -9,7 +9,7 @@ export async function POST(req) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     
     // 2026 standartlarına göre en stabil model ismi:
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
     
     // generateContent yerine bazen sürüm farkından dolayı hata olabiliyor, 
     // en güvenli çağırma yöntemi budur:
